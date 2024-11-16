@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tree-sitter-treez"
+description = "A tree-sitter parser for zig"
+version = "0.1.0"
+keywords = ["incremental", "parsing", "tree-sitter", "treez"]
+classifiers = [
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Software Development :: Compilers",
+  "Topic :: Text Processing :: Linguistic",
+  "Typing :: Typed",
+]
+authors = [{ name = "Hamish MacDonald", email = "elusivenode@gmail.com" }]
+requires-python = ">=3.9"
+license.text = "GNU AFFERO GENERAL PUBLIC LICENSE"
+readme = "README.md"
+
+[project.urls]
+Homepage = "https://github.com/mercurial-hermes/treez"
+
+[project.optional-dependencies]
+core = ["tree-sitter~=0.22"]
+
+[tool.cibuildwheel]
+build = "cp39-*"
+build-frontend = "build"

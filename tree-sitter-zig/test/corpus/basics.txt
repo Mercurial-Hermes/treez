@@ -1,0 +1,42 @@
+==================
+Basic function
+==================
+
+fn add(a: i32, b: i32) i32 {
+    return a + b;
+}
+
+---
+
+(source_file
+  (function_declaration
+    (identifier)
+    (parameter_list
+      (parameter
+        (identifier)
+        (type
+          (identifier)))
+      (parameter
+        (identifier)
+        (type
+          (identifier))))
+    (type
+      (identifier))
+    (block
+      (return_statement
+        (binary_expression
+          (identifier)
+          (identifier))))))
+
+==================
+Simple constant
+==================
+
+const x = 42;
+
+---
+
+(source_file
+  (const_declaration
+    (identifier)
+    (number)))
